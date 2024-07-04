@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Make a multiplier"""
+from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> callable:
