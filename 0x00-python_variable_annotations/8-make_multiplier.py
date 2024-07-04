@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Make a multiplier"""
+'''Task 8's module.
+'''
 from typing import Callable
 
 
-def make_multiplier(multiplier: float) -> callable:
-    """Make a multiplier"""
-    def multiply(n: float) -> float:
-        """Multiply a float by multiplier"""
-        return n * multiplier
-    return multiply
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    '''Creates a multiplier function.
+    '''
+    return lambda x: x * multiplier
