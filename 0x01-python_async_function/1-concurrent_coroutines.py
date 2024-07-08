@@ -10,6 +10,8 @@ async def wait_n(n: int, max_delay: int) -> list[float]:
     """
     spawn wait_random n times with the specified max_delay.
     """
-    res = [await wait_random(max_delay) for _ in range(n)]
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+
+    res = await asyncio.gather(*tasks)
 
     return res
