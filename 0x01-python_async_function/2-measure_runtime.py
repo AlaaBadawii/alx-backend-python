@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 measures the total execution time
 """
